@@ -149,8 +149,18 @@ export default function ItemList() {
         </div>
       </div>
 
+      <div className="flex flex-row gap-8 justify-center mt-7 relative">
+        <div className="text-black font-bold mr-12">ID</div>
+        <div className="text-black font-bold mr-16 ml-10 pr-12">Picture</div>
+        <div className="flex flex-col justify-left mr-16 pr-12">
+          <div className="text-black font-bold">Description</div>
+          <div className="text-black font-normal text-[0.6em]">Name, Description, Location (Collection/Delivery)</div>
+        </div>  
+      </div>
+      
+      {/* Row Layout */}
       <div className="flex flex-row justify-center items-center mt-7">
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-row gap-8">
           {data.map((product, index) => (
             <React.Fragment key={product.id}>
               <ProductCard product={product} />
